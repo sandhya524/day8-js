@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Greeting Function
+// Scenario: Create a function that takes a name as an argument 
+// and returns a greeting message.
+function greet(str){
+    console.log("Hello",str)
+}
+console.log(greet("sandhya"))
+
+// Task 2: Sum Function
+// Scenario: Create a function that takes two numbers as arguments and
+//  returns their sum.
+// Task:
+// Define a function sum that takes two parameters a and b.
+// The function should return the sum of a and b.
+// Call the function with different numbers and print the results.
+a = +prompt("enter a num:")
+b = +prompt("enter a num:")
+function sum(a,b){
+    console.log(a+b)
+}
+console.log(sum(a,b))
+
+// Task 3: Square Function
+// Scenario: Create a function that takes a number as an argument
+//  and returns its square.
+// Task:
+// Define a function square that takes one parameter num.
+// The function should return the square of num.
+// Call the function with different numbers and 
+// print the results.
+c = +prompt("enter a num to square:")
+function sqr(c){
+    return c*c
+}
+console.log(sqr(c))
+
+
+// Task 4: Average Function
+// Scenario: Create a function that takes an array of numbers 
+// as an argument and returns the average.
+// Task:
+// hint:[2,5,2] =9/3=3
+// Define a function average that takes one parameter arr.
+// The function should return the average of the numbers in arr.
+// Call the function with different arrays and print the results.
+d = prompt('enter the array:')
+.split(" ")
+.map(Number);
+function arr(d){
+    let sum1= 0
+
+    for(let i=0;i<d.length;i++){
+          sum1 +=d[i];
+    }
+    let avr = d.length > 0 ? sum1 / d.length :0; 
+    return avr; 
+}
+console.log("average:", arr(d))
+
+// Vowels Function
+// Scenario: Create a function that takes a string as an argument and 
+// returns weather the strings contains vowels or not .
+// Task:
+// Define a function that takes one parameter str.
+// The function should return whether string contains vowels or not.
+// use loops and if conditions
+// Call the function with different strings and print the results.
+// hello --a,e ,i ,o,u---it contains vowels
+// hll---it doesnt contains vowels
+e = prompt("enter a string:")
+function str(e){
+    let vowels = ["a","e","i","o","u"];
+    for(let i=0;i < e.length;i++){
+      let char = e[i];
+       for(let j=0; j<vowels.length;j++){
+        if(char ==vowels[j]){
+            console.log("it contains vowels")
+            return;
+        }
+       }
+    }
+    console.log("it does not contain vowel")
+}
+
+str(e);
+
+// or
+function vowels(str){
+    for(i=0;i<str.length;i++){
+        if(str[i]=="a" || str[i]=="e" || str[i]=="i" || str[i]=="o" || str[i]=="u"){
+            return "it contain vowels"
+        }
+    }
+     return "it does not contain vowel"
+    }
+console.log(vowels("sandhya"))
+console.log(vowels("ghkkl"))
+console.log(vowels("thresh"))
+// Task 6: Temperature Converter
+// Scenario: Create a function that converts temperatures between Celsius and Fahrenheit.
+// Task:
+// Define a function convertTemperature that takes two parameters: temp (the temperature) and
+// scale (the scale to convert to, either “C” or “F”).
+// The function should return the converted temperature.
+// Test the function with different temperatures and scales and print the results.
+// Hints:-
+// formula for celscious (temp - 32) * 5/9
+// formula for fahrehnheit (temp * 9/5) + 32
+
+function tempconv(temp,scale){
+    scale = scale.toLowerCase();
+    if (scale == "c"){
+        return (temp - 32) * 5/9;
+    }
+    else if (scale == "f"){
+        return (temp * 9/5) + 32;
+    }
+    else{
+        return"invalid";
+    }
+}
+console.log(tempconv(30,"f"));
+
+
+
+
+
+    </script>
+</body>
+</html>
